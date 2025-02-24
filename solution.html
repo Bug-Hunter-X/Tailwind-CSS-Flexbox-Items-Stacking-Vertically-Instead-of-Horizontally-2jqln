@@ -1,0 +1,10 @@
+The issue was likely caused by an unintended `flex-direction: column;` style applied either directly to the parent container or inherited from an ancestor element. To fix this, ensure that the parent container's flex-direction is set to `row` (the default, but worth checking). You can explicitly set it using:
+
+```html
+<div class="flex flex-row">
+  <div class="bg-blue-500 w-20 h-20"></div>
+  <div class="bg-red-500 w-20 h-20"></div>
+</div>
+```
+
+Alternatively, check for any conflicting styles applied via CSS rules or parent elements.  Use your browser's developer tools to inspect the element and determine if any unexpected styles are being applied.
